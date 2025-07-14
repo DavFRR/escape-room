@@ -1,23 +1,7 @@
 // Import styles
 import '../styles/main.css';
 
-let pageState = 1;
 
-const transitionToNextPage = () => {
-    const body = document.body;
-    body.style.opacity = '0';
-    
-    setTimeout(() => {
-        if (pageState === 1) {
-            document.querySelector('.centered-text').textContent = 'Love you my love';
-            pageState = 2;
-            body.style.opacity = '1';
-        } else if (pageState === 2) {
-            // Transition to escape room
-            window.location.href = './escape-room.html';
-        }
-    }, 500);
-};
 
 // Add transition styles
 const style = document.createElement('style');
