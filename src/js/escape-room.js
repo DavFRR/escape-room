@@ -25,8 +25,20 @@ const correctAnswer = ['E', 'G', 'B', 'A', 'D', 'C', 'I', 'F', 'H'];
 function activateZoom() {
     console.log('activateZoom called.');
     const container = document.querySelector('.room-container');
+    console.log('Container found:', container);
+    
     if (!container.classList.contains('zoom-active')) {
+        console.log('Adding zoom-active class');
         container.classList.add('zoom-active');
+        
+        // Remove the debug border and background after the animation completes
+        setTimeout(() => {
+            const tableButton = document.getElementById('table-button');
+            if (tableButton) {
+                tableButton.style.background = 'transparent';
+                tableButton.style.border = 'none';
+            }
+        }, 1500);
     }
 }
 
