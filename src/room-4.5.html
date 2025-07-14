@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 4.5</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body style="background-image: url('../assets/room4.5.png'); background-size: cover; background-repeat: no-repeat;">
+    <div class="overlay"></div>
+    <div class="cursor"></div>
+
+    <div id="quiz-container" style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; width: 80%; max-width: 600px; padding: 20px; border-radius: 10px;">
+        <h2 id="question" style="margin-bottom: 20px;"></h2>
+        <div id="answers" style="display: flex; flex-direction: column; gap: 10px;">
+            <button class="answer-btn" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;"></button>
+            <button class="answer-btn" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;"></button>
+            <button class="answer-btn" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;"></button>
+        </div>
+        <div id="feedback" style="margin-top: 20px; font-weight: bold;"></div>
+    </div>
+
+    <button id="proceed-button" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 15px 30px; font-size: 24px; background-color: #007bff; color: white; border: none; border-radius: 10px; cursor: pointer;">Proceed to the big question</button>
+    <script src="./js/room-4.5.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 4</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body class="start-page">
+    <div class="centered-text">Would you be my valentine?</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const centeredText = document.querySelector('.centered-text');
+            if (centeredText) {
+                centeredText.addEventListener('click', () => {
+                    window.location.href = 'room-4.5.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

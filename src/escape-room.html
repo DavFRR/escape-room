@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 1</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .room-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .table-button {
+            position: absolute;
+            bottom: 25%;
+            left: 45%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 150px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        .answer-table {
+            position: fixed;
+            top: 45%;
+            left: 70%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 3;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-in-out;
+            cursor: move;
+            user-select: none;
+        }
+        .answer-row {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            font-family: Arial, sans-serif;
+        }
+        .answer-label {
+            width: 30px;
+            color: #333;
+        }
+        .answer-input {
+            width: 40px;
+            height: 30px;
+            margin-left: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .check-button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .check-button:hover {
+            background: #45a049;
+        }
+        .zoom-active .answer-table {
+            opacity: 1;
+            visibility: visible;
+        }
+        .table-button:hover {
+            transform: translateX(-50%) scale(1.1);
+        }
+        .sticky-notes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease-in-out;
+            pointer-events: none;
+            z-index: 2;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.2);
+            opacity: 0;
+            visibility: hidden;
+        }
+        .zoom-active .sticky-notes {
+            opacity: 1;
+            visibility: visible;
+        }
+        .zoom-active .background {
+            transform-origin: 45% 85%;
+            transform: scale(2.5);
+            transition: transform 0.8s ease-in-out, opacity 0.4s ease-in-out 0.4s;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .zoom-active .sticky-notes {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="room-container">
+        <img src="assets/room_1.gif" alt="Room 1" class="background">
+        <button class="table-button" onclick="activateZoom()"></button>
+        <img src="assets/love.png" alt="Sticky Notes" class="sticky-notes">
+        <div class="answer-table">
+            <div class="answer-row"><span class="answer-label">1.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <div class="answer-row"><span class="answer-label">2.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <div class="answer-row"><span class="answer-label">3.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <div class="answer-row"><span class="answer-label">4.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <div class="answer-row"><span class="answer-label">5.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <div class="answer-row"><span class="answer-label">6.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <div class="answer-row"><span class="answer-label">7.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <div class="answer-row"><span class="answer-label">8.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <div class="answer-row"><span class="answer-label">9.-</span><input type="text" class="answer-input" maxlength="1"></div>
+            <button class="check-button" onclick="checkAnswer()">Check Answer</button>
+        </div>
+    </div>
+    <script src="js/escape-room.js"></script>
+</body>
+</html>
