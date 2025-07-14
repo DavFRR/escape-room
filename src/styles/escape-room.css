@@ -43,6 +43,7 @@ body {
 
 .room-container.zoom-active .background {
     transform: scale(2);
+    z-index: 1;
 }
 
 .sticky-notes {
