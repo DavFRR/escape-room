@@ -78,10 +78,10 @@ body {
 
 .table-button {
     position: absolute;
-    top: 50%; /* Adjust as needed to position over the table */
-    left: 50%; /* Adjust as needed to position over the table */
-    width: 200px; /* Example size */
-    height: 100px; /* Example size */
+    top: 60%; /* Adjusted to better position over the table */
+    left: 45%; /* Adjusted to better position over the table */
+    width: 300px; /* Adjusted size */
+    height: 150px; /* Adjusted size */
     background: transparent; /* Make it invisible */
     border: none;
     cursor: pointer;
