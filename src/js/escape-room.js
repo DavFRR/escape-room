@@ -14,8 +14,8 @@ window.activateZoom = function() {
 function initDraggableTable() {
     const table = document.querySelector('.answer-table');
     let isDragging = false;
-    let currentX;
-    let currentY;
+    let currentX = 0;
+    let currentY = 0;
     let initialX;
     let initialY;
 
