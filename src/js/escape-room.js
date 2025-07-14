@@ -25,20 +25,21 @@ const correctAnswer = ['E', 'G', 'B', 'A', 'D', 'C', 'I', 'F', 'H'];
 function activateZoom() {
     console.log('activateZoom called.');
     const container = document.querySelector('.room-container');
-    console.log('Container found:', container);
-    
-    if (!container.classList.contains('zoom-active')) {
-        console.log('Adding zoom-active class');
-        container.classList.add('zoom-active');
-        
-        // Remove the debug border and background after the animation completes
-        setTimeout(() => {
-            const tableButton = document.getElementById('table-button');
-            if (tableButton) {
-                tableButton.style.background = 'transparent';
-                tableButton.style.border = 'none';
-            }
-        }, 1500);
+    const stickyNotes = document.querySelector('.sticky-notes');
+    const answerTable = document.querySelector('.answer-table');
+
+    if (container && stickyNotes && answerTable) {
+        container.style.backgroundImage = 'url("assets/love.png")';
+        container.style.backgroundSize = 'cover';
+        container.style.backgroundPosition = 'center';
+        container.style.transition = 'background-image 1s ease-in-out';
+
+        // Make sticky-notes and answer-table visible immediately
+        stickyNotes.style.opacity = '1';
+        stickyNotes.style.visibility = 'visible';
+        answerTable.style.opacity = '1';
+        answerTable.style.visibility = 'visible';
+        answerTable.style.transform = 'translate(-50%, -50%) scale(1)';
     }
 }
 
