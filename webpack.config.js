@@ -26,6 +26,9 @@ module.exports = {
       if (pathData.filename.includes('room2.png')) {
         return 'assets/room2.png';
       }
+      if (pathData.filename.includes('love.png')) {
+        return 'assets/love.png';
+      }
       return 'assets/[name][ext]';
     }
   },
@@ -132,6 +135,10 @@ module.exports = {
         {
           from: 'src/assets/room4.5.png',
           to: 'assets/room4.5.png',
+        },
+        {
+          from: 'src/assets/love.png',
+          to: 'assets/love.png',
         },
       ],
     })
