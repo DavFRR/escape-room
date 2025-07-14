@@ -3,6 +3,8 @@ import '../assets/love.png';
 
 const correctAnswer = ['E', 'G', 'B', 'A', 'D', 'C', 'I', 'F', 'H'];
 
+console.log('escape-room.js loaded');
+
 window.activateZoom = function() {
     const container = document.querySelector('.room-container');
     console.log('activateZoom called');
