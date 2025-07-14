@@ -19,36 +19,7 @@ function activateZoom() {
     const container = document.querySelector('.room-container');
     if (!container.classList.contains('zoom-active')) {
         container.classList.add('zoom-active');
-        initDraggableTable();
     }
-}
-
-function initDraggableTable() {
-    const table = document.querySelector('.answer-table');
-    let isDragging = false;
-    let currentX = 0;
-    let currentY = 0;
-    let initialX;
-    let initialY;
-
-    table.addEventListener('mousedown', e => {
-        isDragging = true;
-        initialX = e.clientX - currentX;
-        initialY = e.clientY - currentY;
-    });
-
-    document.addEventListener('mousemove', e => {
-        if (isDragging) {
-            e.preventDefault();
-            currentX = e.clientX - initialX;
-            currentY = e.clientY - initialY;
-            table.style.transform = `translate(${currentX}px, ${currentY}px)`;
-        }
-    });
-
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-    });
 }
 
 function checkAnswer() {

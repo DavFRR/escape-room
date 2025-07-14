@@ -61,8 +61,8 @@ body {
 
 .answer-table {
     position: absolute;
-    top: 70%;
-    left: 50%;
+    top: 50%;
+    left: 80%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0;
