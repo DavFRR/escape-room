@@ -38,7 +38,7 @@ body {
     object-fit: cover;
     transition: transform 0.5s ease-in-out;
     z-index: 1;
-    transform-origin: 65% 75%;
+    transform-origin: center;
 }
 
 .room-container.zoom-active .background {
