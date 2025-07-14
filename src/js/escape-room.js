@@ -7,7 +7,7 @@ console.log('escape-room.js loaded');
 
 window.activateZoom = function() {
     const container = document.querySelector('.room-container');
-    console.log('activateZoom called');
+    console.log('activateZoom called from button click');
     if (!container.classList.contains('zoom-active')) {
         container.classList.add('zoom-active');
         initDraggableTable();
