@@ -5,6 +5,7 @@ const correctAnswer = ['E', 'G', 'B', 'A', 'D', 'C', 'I', 'F', 'H'];
 
 window.activateZoom = function() {
     const container = document.querySelector('.room-container');
+    console.log('activateZoom called');
     if (!container.classList.contains('zoom-active')) {
         container.classList.add('zoom-active');
         initDraggableTable();
