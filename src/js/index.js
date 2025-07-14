@@ -28,13 +28,13 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Initialize click handler
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.addEventListener('click', () => {
-        if (pageState < 3) {
-            transitionToNextPage();
-        }
-    });
+    const startButton = document.getElementById('startButton');
+    if (startButton) {
+        startButton.addEventListener('click', () => {
+            window.location.href = './escape-room.html';
+        });
+    }
 });
 
 // Main render function
