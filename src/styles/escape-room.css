@@ -85,8 +85,9 @@ body {
     transform: translate(-50%, -50%);
     width: 40vw;
     height: 20vh;
-    background: transparent;
-    border: none;
+    background: rgba(255, 0, 0, 0.3);
+    border: 2px solid red;
     cursor: pointer;
-    z-index: 4;
+    z-index: 10;
+    pointer-events: auto;
 }
