@@ -78,8 +78,9 @@ body {
 
 .table-button {
     position: absolute;
-    top: 50%; /* Adjust as needed to position over the table */
+    top: 70%; /* Adjust as needed to position over the table */
     left: 50%; /* Adjust as needed to position over the table */
+    transform: translate(-50%, -50%);
     width: 200px; /* Example size */
     height: 100px; /* Example size */
     background: transparent; /* Make it invisible */
