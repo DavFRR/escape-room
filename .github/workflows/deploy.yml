@@ -29,10 +29,14 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Copy built files to root
+        run: |
+          cp -r dist/* .
+          cp -r dist/.* . 2>/dev/null || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./dist
+          path: .
 
   deploy:
     environment:

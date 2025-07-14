@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const proceedButton = document.getElementById('proceed-button');
                     proceedButton.style.display = 'block';
                     proceedButton.onclick = () => {
-                        window.location.href = 'room-5.html';
+                        window.location.href = './room-5.html';
                     };
                 }
             }, 1000);

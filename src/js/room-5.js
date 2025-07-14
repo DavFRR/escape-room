@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         yesButton.addEventListener('click', () => {
-            window.location.href = 'room-6.html';
+            window.location.href = './room-6.html';
         });
 
     noButton.addEventListener('mouseover', () => {

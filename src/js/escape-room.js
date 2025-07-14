@@ -45,7 +45,7 @@ window.checkAnswer = function() {
     
     if (answers.join('') === correctAnswer.join('')) {
         alert('Congrats on the first room, you\'re so intelligent, click the button to go to the next room');
-        window.location.href = '/room-2.html';
+        window.location.href = './room-2.html';
     } else {
         inputs.forEach((input, index) => {
             if (input.value.toUpperCase() === correctAnswer[index]) {

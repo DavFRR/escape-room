@@ -13,7 +13,7 @@ const transitionToNextPage = () => {
             body.style.opacity = '1';
         } else if (pageState === 2) {
             // Transition to escape room
-            window.location.href = 'room-4.5.html';
+            window.location.href = './room-4.5.html';
         }
     }, 500);
 };

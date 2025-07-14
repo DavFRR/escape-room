@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (allWordsPresent) {
             successMessage.style.display = 'block';
             setTimeout(() => {
-                window.location.href = 'room-4.html';
+                window.location.href = './room-4.html';
             }, 3000);
         }
     }
