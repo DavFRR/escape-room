@@ -84,7 +84,8 @@ body {
     transform: translate(-50%, -50%);
     width: 200px; /* Example size */
     height: 100px; /* Example size */
-    background: transparent; /* Make it invisible */
+    background: rgba(255, 0, 0, 0.5); /* Make it visible for debugging */
+    border: 2px solid blue;
     border: none;
     cursor: pointer;
     z-index: 4;
