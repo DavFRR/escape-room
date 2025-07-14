@@ -71,6 +71,19 @@ npm run build
 
 The built files will be available in the `dist` directory.
 
+### GitHub Pages Deployment
+
+This project is configured to automatically deploy to GitHub Pages when changes are pushed to the main branch. The deployment process is handled by GitHub Actions workflows in the `.github/workflows` directory.
+
+The deployment process:
+1. Checks out the code
+2. Sets up Node.js
+3. Installs dependencies
+4. Builds the project
+5. Deploys the built files to GitHub Pages
+
+You can view the deployed site at your GitHub Pages URL (typically `https://username.github.io/repository-name/`).
+
 ## Development
 
 ### Code Organization

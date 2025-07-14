@@ -1,0 +1,24 @@
+# GitHub Pages configuration
+
+# Use the custom domain if you have one
+# url: example.com
+
+# Build settings
+markdown: kramdown
+
+# Exclude files from being included in the build
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - webpack.config.js
+  - .babelrc
+  - .gitignore
+  - README.md
+  - AGENT.md
+  - src
+
+# Include files that would otherwise be excluded
+include:
+  - .nojekyll
+  - 404.html

@@ -8,7 +8,9 @@
     "build": "webpack --mode production",
     "test": "jest",
     "lint": "eslint src/**/*.js",
-    "format": "prettier --write 'src/**/*.{js,css,html}'"
+    "format": "prettier --write 'src/**/*.{js,css,html}'",
+    "predeploy": "npm run build",
+    "deploy": "echo 'Manual deployment not needed. GitHub Actions will deploy automatically when you push to the main branch.'"
   },
   "dependencies": {
     "@babel/runtime": "^7.22.15"
