@@ -1,8 +1,8 @@
 import '../assets/room_1.gif';
 import '../assets/love.png';
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOMContentLoaded event fired.');
+window.initializeEscapeRoom = function() {
+    console.log('initializeEscapeRoom called.');
     const tableButton = document.getElementById('table-button');
     if (tableButton) {
         console.log('table-button found.');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('check-button not found!');
     }
-});
+}
 
 const correctAnswer = ['E', 'G', 'B', 'A', 'D', 'C', 'I', 'F', 'H'];
 
