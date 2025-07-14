@@ -1,6 +1,3 @@
-import '../assets/room_1.gif';
-import '../assets/love.png';
-
 const correctAnswer = ['E', 'G', 'B', 'A', 'D', 'C', 'I', 'F', 'H'];
 
 window.activateZoom = function() {
