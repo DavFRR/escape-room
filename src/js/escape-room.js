@@ -10,7 +10,9 @@ window.activateZoom = function() {
     console.log('activateZoom called from button click');
     if (!container.classList.contains('zoom-active')) {
         container.classList.add('zoom-active');
+        console.log('zoom-active class added');
         initDraggableTable();
+        console.log('initDraggableTable called');
     }
 }
 
