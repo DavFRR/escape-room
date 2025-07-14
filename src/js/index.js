@@ -28,13 +28,12 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+function startGame() {
+    window.location.href = './escape-room.html';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    const startButton = document.getElementById('startButton');
-    if (startButton) {
-        startButton.addEventListener('click', () => {
-            window.location.href = './escape-room.html';
-        });
-    }
+    // No specific button to listen to, the body itself is clickable via onclick="startGame()"
 });
 
 // Main render function
