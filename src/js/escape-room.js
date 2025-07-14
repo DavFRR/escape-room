@@ -1,9 +1,21 @@
 import '../assets/room_1.gif';
 import '../assets/love.png';
 
+document.addEventListener('DOMContentLoaded', () => {
+    const tableButton = document.getElementById('table-button');
+    if (tableButton) {
+        tableButton.addEventListener('click', activateZoom);
+    }
+
+    const checkButton = document.querySelector('.check-button');
+    if (checkButton) {
+        checkButton.addEventListener('click', checkAnswer);
+    }
+});
+
 const correctAnswer = ['E', 'G', 'B', 'A', 'D', 'C', 'I', 'F', 'H'];
 
-window.activateZoom = function() {
+function activateZoom() {
     const container = document.querySelector('.room-container');
     if (!container.classList.contains('zoom-active')) {
         container.classList.add('zoom-active');
@@ -39,7 +51,7 @@ function initDraggableTable() {
     });
 }
 
-window.checkAnswer = function() {
+function checkAnswer() {
     const inputs = document.querySelectorAll('.answer-input');
     const answers = Array.from(inputs).map(input => input.value.toUpperCase());
     
